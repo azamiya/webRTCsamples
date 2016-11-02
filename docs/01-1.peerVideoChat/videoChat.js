@@ -20,7 +20,7 @@ function getMyID() {
 peer.on('call', function(call){
     connectedCall = call;
     //$("#peer-id").text(call.peer);
-    document.getElementById("peer-id").innerHTML = peer_id;
+    document.getElementById("peer-id").innerHTML = call.peer;
     call.answer(localStream);
  
     call.on('stream', function(stream){
