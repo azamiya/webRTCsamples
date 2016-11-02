@@ -36,7 +36,7 @@ function displayMyCamera(){
     }, function() { alert("Error!"); });
 }
 
-function call-start(){
+function callStart(){
     var peer_id = document.getElementById("peer-id-input").value;
     var call = peer.call(peer_id, localStream);
     call.on('stream', function(stream){
@@ -46,6 +46,6 @@ function call-start(){
     });
 }
 
-function call-end() {
+function callEnd() {
     connectedCall.close();
 }
