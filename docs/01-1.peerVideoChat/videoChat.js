@@ -5,30 +5,35 @@ var connectedCall;  // 接続したコールを保存しておく変数
  
 var peer = new Peer({ key: 'px6645j12izilik9', debug: 3});
 
+window.onload = function(){
+    displayMyCamera();
+}
+
 //Get peer id
 peer.on('open', function(){
-    $('#my-id').text(peer.id);
+    connectedCall = call;
+    document.getElementById("my-id").innerHTML = peer.id;
+    call.answer(localStream);
+
+    call.on('stream', function(stream){
+        var url = URL.createObjectURL(stream);
+        document.getElementById("peer-video").src = url;
+    });
 });
 
 //take calling from other peer
 peer.on('call', function(call){
     connectedCall = call;
-     $("#peer-id").text(call.peer);
+        $("#peer-id").text(call.peer);
     call.answer(localStream);
  
     call.on('stream', function(stream){
         var url = URL.createObjectURL(stream);
-         $('#peer-video').prop('src', url);
+        $('#peer-video').prop('src', url);
     });
 });
  
-$(function() {
-    navigator.getUserMedia({audio: true, video: true}, function(stream){
-        localStream = stream;
-        var url = URL.createObjectURL(stream);
-        $('#my-video').prop('src', url);
- 
-    }, function() { alert("Error!"); });
+/*$(function() {
  
     //recieve calling from other peer
     $('#call-start').click(function(){
@@ -46,4 +51,25 @@ $(function() {
     $('#call-end').click(function(){
         connectedCall.close();
     });
-});
+});*/
+
+function displayMyCamera(){
+    navigator.getUserMedia({audio: true, video: true}, function(stream){
+        localStream = stream;
+        document.getElementById("my-video").src = URL.createObjectURL(stream);
+    }, function() { alert("Error!"); });
+}
+
+function callStart(){
+    var peer_id = document.getElementById("peer-id-input").value;
+    var call = peer.call(peer_id, localStream);
+    call.on('stream', function(stream){
+        document.getElementById("PeerID").innerHTML = partnerID;
+        var url = = URL.createObjectURL(stream);
+        document.getElementById("peer-video").src = url;
+    });
+}
+
+function callEnd() {
+    connectedCall.close();
+}
