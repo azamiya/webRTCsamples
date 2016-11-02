@@ -40,7 +40,7 @@ function callStart(){
     var peer_id = document.getElementById("peer-id-input").value;
     var call = peer.call(peer_id, localStream);
     call.on('stream', function(stream){
-        document.getElementById("PeerID").innerHTML = peer_id;
+        document.getElementById("peer-id").innerHTML = peer_id;
         var url = URL.createObjectURL(stream);
         document.getElementById("peer-video").src = url;
     });
