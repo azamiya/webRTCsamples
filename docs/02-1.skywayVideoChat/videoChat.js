@@ -3,7 +3,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 var localStream;
 var connectedCall;
  
-var peer = new Peer({ key: '26f45df9-8480-4088-9ae2-8daec97a0a0a', debug: 3});
+var peer = new Peer({ key: '5bea388b-3f95-4e1e-acb5-a34efdd0c480', debug: 3});
 
 window.onload = function(){
     displayMyCamera();
