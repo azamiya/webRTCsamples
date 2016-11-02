@@ -16,16 +16,13 @@ function getMyID() {
     });
 }
 
-//take calling from other peer
 peer.on('call', function(call){
     connectedCall = call;
-    //$("#peer-id").text(call.peer);
     document.getElementById("peer-id").innerHTML = call.peer;
     call.answer(localStream);
  
     call.on('stream', function(stream){
         var url = URL.createObjectURL(stream);
-        //$('#peer-video').prop('src', url);
         document.getElementById("peer-video").src = url;
     });
 });
