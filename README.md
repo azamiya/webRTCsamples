@@ -18,7 +18,15 @@ $ npm start
 simple peer video chat sample code
 
 **02-1.skyway video chat** 
-simple skyway videochat sample code
+simple skyway videochat sample code  
+※WARNING please use https://skyway.io/dist/v2/0.3/peer.js and DO NOT FORGET   
+```
+var peer = new Peer({
+    key: 'bc3035be-047d-4b36-bab7-bd2a8b0c7b33',
+    debug: 3,
+    turn: false
+});
+```
 
 ![Imgur](http://i.imgur.com/aJfFBV7.png)  
 
