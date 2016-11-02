@@ -22,5 +22,5 @@ simple skyway videochat sample code
 
 ![Imgur](http://i.imgur.com/aJfFBV7.png)  
 
-### References ###  
+### References ###
 [Skyway tutorial](https://html5experts.jp/katsura/16331/)  
