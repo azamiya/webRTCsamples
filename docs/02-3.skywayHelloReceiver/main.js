@@ -14,10 +14,10 @@ function getMyID() {
     });
 }
 
-function callStart(){
-    var peer_id = document.getElementById("peer-id-input").value;
-    var conn = peer.connect(peer_id);
-    conn.on('open', function() {
-        conn.send('hello world');
+peer.on('connection', function(conn) {
+    document.getElementById("peer-id").innerHTML = conn.peer;
+    conn.on('data', function(data){
+        console.log(data);
+        document.getElementById("receive_message").innerHTML = data;
     });
-}
+});
