@@ -21,16 +21,16 @@ Witout this setting, your domain (also localhost) can not use skyway.
 
 ![Imgur](http://i.imgur.com/aJfFBV7.png)
 ### Index ###
-**01-1.peerJS video chat** 
+**01-1.peerJS video chat** 　
 simple peer video chat sample code
 
-**01-2.peerJS hello world sender** 
+**01-2.peerJS hello world sender** 　
 sample of peerJS data channel. Just send "Hello World".  
 
-**01-3.peerJS hello world reciever** 
+**01-3.peerJS hello world reciever** 　
 sample of peerJS data channel. Just receive data from sender.
 
-**02-1.skyway video chat** 
+**02-1.skyway video chat** 　
 simple skyway videochat sample code  
 ※WARNING please use https://skyway.io/dist/v2/0.3/peer.js and DO NOT FORGET these options    
 ```
@@ -41,10 +41,10 @@ var peer = new Peer({
 });
 ```
 
-**02-2.skyway hello world sender** 
+**02-2.skyway hello world sender**　　
 sample of skyway data channel. Just send "Hello World".  
 
-**02-3.skyway hello world reciever** 
+**02-3.skyway hello world reciever** 　
 sample of skyway data channel. Just receive data from sender.
 
 ![Imgur](http://i.imgur.com/aJfFBV7.png)  
