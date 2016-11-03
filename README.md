@@ -1,5 +1,5 @@
 ![Imgur](http://i.imgur.com/aJfFBV7.png)
-# psvrBear #
+# webrtc-samples #
 
 ### What is this repository for? 
 make telepresence teddybear using PSVR, threejs, johnny-five, arduino, iRobot create2, peerJS
@@ -12,6 +12,13 @@ $ cd path
 $ npm install
 $ npm start
 ```
+
+![Imgur](http://i.imgur.com/aJfFBV7.png)
+### Before using skyway ###
+DO NOT FORGET to setup your domain to skyway API key settings.  
+Witout this setting, your domain (also localhost) can not use skyway.  
+![Imgur](http://i.imgur.com/lWM3PYh.png)  
+
 ![Imgur](http://i.imgur.com/aJfFBV7.png)
 ### Index ###
 **01-1.peer video chat** 
