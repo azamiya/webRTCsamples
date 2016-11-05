@@ -1,10 +1,9 @@
-var peer = new Peer({
-    key: 'px6645j12izilik9',
-    debug: 3
-});
+var peer = new Adawarp();
+
 
 window.onload = function(){
     getMyID();
+    peer.login();
 }
 
 function getMyID() {
