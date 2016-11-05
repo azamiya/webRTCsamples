@@ -3,11 +3,12 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 var localStream;
 var connectedCall;
  
-var peer = new Peer({ key: 'px6645j12izilik9', debug: 3});
+var peer = new Adawarp();
 
 window.onload = function(){
     displayMyCamera();
     getMyID();
+    peer.login();
 }
 
 function getMyID() {
